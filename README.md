@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project is a client-side mod developed for Lethal Company using the BepInEx framework. It utilizes runtime patching (Harmony) to intercept the game's audio logic and replace the default boombox music with custom, user-defined audio files dynamically.
+This project is a client-side mod developed for Repo using the BepInEx framework. It utilizes runtime patching (Harmony) to intercept the game's audio logic and replace the default boombox music with custom, user-defined audio files dynamically.
 
 ## Key Features
 
