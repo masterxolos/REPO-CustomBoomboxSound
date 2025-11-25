@@ -1,37 +1,41 @@
-# Custom Boombox Sound
+# 📻 Custom Boombox Sound Mod
 
-This mod replaces the in-game boombox music with a custom royalty-free track:  
-**"Susan - Royalty Free Instrumental Disco-House Music Loop (125 bpm)"**.
+## Project Overview
 
-Place your `custom.ogg` in the plugin folder if you'd like to change the music.
+This project is a client-side mod developed for Lethal Company using the BepInEx framework. It utilizes runtime patching (Harmony) to intercept the game's audio logic and replace the default boombox music with custom, user-defined audio files dynamically.
+
+## Key Features
+
+* **Runtime Asset Replacement:** Intercepts game calls to swap audio clips in real-time without modifying base game files.
+* **Custom Audio Support:** Users can easily inject their own `.ogg` files.
+* **Royalty-Free Default:** Comes pre-packaged with a royalty-free track ("Susan - 125 bpm") ensuring stream-safe usage.
+
+## Technical Stack
+
+* **Language:** C#
+* **Framework:** .NET Framework 4.7.2
+* **Modding Tools:** BepInEx 5.x, Harmony (0Harmony)
+* **Engine:** Unity (Runtime Patching)
 
 ---
 
-## Credits
-Music by [The Loop Lady](https://thelooplady.bandcamp.com/track/susan-royalty-free-instrumental-disco-house-music-loop-125-bpm) – used under royalty-free license.
+## 🛠️ How to Build (Compile)
 
-##How to Build (Compile) the Mod
-To compile this plugin from source, follow these steps:
+To compile this plugin from the source code, follow these steps to ensure dependencies are resolved correctly.
 
-📦 Requirements
-.NET Framework 4.7.2 Developer Pack
-Visual Studio 2019 or later
-BepInEx 5.x
-The game installed (to reference its DLLs)
+### 1. Requirements
 
-📁 Folder Structure
-Make sure your folder structure looks like this:
+* **.NET Framework 4.7.2 Developer Pack**
+* **Visual Studio 2019** or later
+* **BepInEx 5.x**
+* **Game Installation:** You must have the game installed locally to reference its DLLs (`Assembly-CSharp.dll`, `UnityEngine.dll`, etc.).
 
+### 2. Folder Structure
+
+Ensure your project directory is organized as follows for the `.csproj` file to locate files correctly:
+
+```text
 CustomBoomboxSound/
-├── CustomBoomboxSound.csproj
-├── Plugin.cs
-├── custom.ogg (optional, for testing)
-🧷 References to Add (DLLs)
-In your project file (.csproj), you need to reference these assemblies:
-
-UnityEngine.dll
-UnityEngine.CoreModule.dll
-UnityEngine.Networking.dll
-BepInEx.dll
-0Harmony.dll
-
+├── CustomBoomboxSound.csproj   # Main project configuration
+├── Plugin.cs                   # C# Source code containing patches
+└── custom.ogg                  # Audio file (optional, for testing)
