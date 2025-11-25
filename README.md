@@ -39,3 +39,27 @@ CustomBoomboxSound/
 ├── CustomBoomboxSound.csproj   # Main project configuration
 ├── Plugin.cs                   # C# Source code containing patches
 └── custom.ogg                  # Audio file (optional, for testing)
+```
+
+### 3. References (DLLs)
+In your CustomBoomboxSound.csproj, you need to reference the following assemblies found in the game's managed folder or BepInEx core:
+
+UnityEngine.dll
+
+UnityEngine.CoreModule.dll
+
+UnityEngine.Networking.dll
+
+BepInEx.dll
+
+0Harmony.dll
+
+### Installation for Users
+Install BepInEx into your game folder.
+
+Place CustomBoomboxSound.dll into the BepInEx/plugins folder.
+
+(Optional) Place your own custom.ogg into the plugins folder to override the music.
+
+Credits
+Music: "Susan - Royalty Free Instrumental Disco-House Music Loop" by The Loop Lady (Licensed under Royalty-Free).
